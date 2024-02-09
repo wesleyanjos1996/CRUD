@@ -6,7 +6,7 @@ require_once './includes/header.php';
         <h3 class="light">Novo Cliente</h3>
         <form action="./actions/create.php" method="post">
             <div class="input-field col s12">
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" autocomplete="additional-name">
                 <label for="name">Nome</label>
             </div>
             <div class="input-field col s12">
@@ -14,7 +14,7 @@ require_once './includes/header.php';
                 <label for="last">Sobrenome</label>
             </div>
             <div class="input-field col s12">
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" autocomplete="email">
                 <label for="email">Email</label>
             </div>
             <div class="input-field col s12">

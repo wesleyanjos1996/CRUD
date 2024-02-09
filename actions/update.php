@@ -1,13 +1,14 @@
 <?php
 session_start();
 require_once './db-connect.php';
-if (isset($_POST['btn-edit'])) 
-{
-    $name = mysqli_escape_string($connect, $_POST['name']);   
-    $last = mysqli_escape_string($connect, $_POST['last']);
-    $email = mysqli_escape_string($connect, $_POST['email']);
-    $birth = mysqli_escape_string($connect, $_POST['birth']);
-    $id = mysqli_escape_string($connect, $_POST['id']);
+require_once './clear.php';
+
+if (isset($_POST['btn-edit'])) {
+    $name = clear($_POST['name']);   
+    $last = clear($_POST['last']);
+    $email = clear($_POST['email']);
+    $birth = clear($_POST['birth']);
+    $id = clear($_POST['id']);
     $name = mb_strtoupper($name);
     $last = mb_strtoupper($last);
     $email = mb_strtoupper($email);
