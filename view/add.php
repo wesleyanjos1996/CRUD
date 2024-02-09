@@ -4,7 +4,7 @@ require_once './includes/header.php';
 <div class="row">
     <div class="col s12 m6 push-m3">
         <h3 class="light">Novo Cliente</h3>
-        <form action="./actions/create.php" method="post">
+        <form action="../controller/create.php" method="post">
             <div class="input-field col s12">
                 <input type="text" name="name" id="name" autocomplete="additional-name">
                 <label for="name">Nome</label>
@@ -22,7 +22,7 @@ require_once './includes/header.php';
                 <label for="birth">Nascimento</label>
             </div>
             <button type="submit" class="btn" name="btn-create">Cadastrar</button>
-            <a href="./index.php" class="btn blue">Clientes</a>
+            <a href="../index.php" class="btn blue">Clientes</a>
         </form>
     </div>
 </div>

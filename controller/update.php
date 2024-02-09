@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once './db-connect.php';
+require_once '../modal/db-connect.php';
 require_once './clear.php';
 
 if (isset($_POST['btn-edit'])) {

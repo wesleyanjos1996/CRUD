@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once './db-connect.php';
+require_once '../modal/db-connect.php';
 if (isset($_POST['btn-delete'])) {
     $id = mysqli_escape_string($connect, $_POST['id']);
     $sql = "DELETE FROM clientes WHERE idcliente = '$id'";

@@ -1,7 +1,7 @@
 <?php
-require_once './actions/db-connect.php';
-require_once './includes/header.php';
-include_once './includes/msg.php';
+require_once './modal/db-connect.php';
+require_once './view/includes/header.php';
+include_once './view/includes/msg.php';
 ?>
 
 <div class="row">
@@ -29,7 +29,7 @@ include_once './includes/msg.php';
                     <td><?php echo $data['email']?></td>
                     <td><?php echo $data['nascimento']?></td>
                     <td>
-                        <a href="./edit.php?id=<?php echo $data['idcliente']?>" class="btn-floating blue" title="Editar" rel="next">
+                        <a href="./view/edit.php?id=<?php echo $data['idcliente']?>" class="btn-floating blue" title="Editar" rel="next">
                             <i class="material-icons">edit</i>
                         </a>
                     </td>
@@ -44,7 +44,7 @@ include_once './includes/msg.php';
                             <p>Tem certeza que deseja excluir esse cliente ?</p>
                         </div>
                         <div class="modal-footer">
-                            <form action="./actions/delete.php" method="post">
+                            <form action="./controller/delete.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $data['idcliente']?>">
                                 <button type="submit" name="btn-delete" class="btn red">Excluir Cliente !</button>
                                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
@@ -68,9 +68,9 @@ include_once './includes/msg.php';
             </tbody>
         </table>
         <br>
-        <a href="./add.php" class="btn" rel="next">Adicionar Cliente</a>
+        <a href="./view/add.php" class="btn" rel="next">Adicionar Cliente</a>
     </div>
 </div>
 <?php
-require_once './includes/footer.php';
+require_once './view/includes/footer.php';
 ?>

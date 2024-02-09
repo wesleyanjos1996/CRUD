@@ -1,5 +1,5 @@
 <?php
-require_once './actions/db-connect.php';
+require_once '../modal/db-connect.php';
 require_once './includes/header.php';
 
 if (isset($_GET['id'])) {
@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
 <div class="row">
     <div class="col s12 m6 push-m3">
         <h3 class="light">Editar Cliente</h3>
-        <form action="./actions/update.php" method="post">
+        <form action="../controller/update.php" method="post">
             <input type="hidden" name="id" value="<?php echo $data['idcliente']?>">
             <div class="input-field col s12">
                 <input type="text" name="name" id="name" value="<?php echo $data['nome']?>" autocomplete="additional-name">
@@ -31,7 +31,7 @@ if (isset($_GET['id'])) {
                 <label for="birth">Nascimento</label>
             </div>
             <button type="submit" class="btn" name="btn-edit">Atualizar</button>
-            <a href="./index.php" class="btn blue">Clientes</a>
+            <a href="../index.php" class="btn blue">Clientes</a>
         </form>
     </div>
 </div>
